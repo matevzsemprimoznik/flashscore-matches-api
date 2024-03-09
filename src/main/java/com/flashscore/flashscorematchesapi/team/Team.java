@@ -1,9 +1,6 @@
 package com.flashscore.flashscorematchesapi.team;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table
@@ -27,6 +24,17 @@ public class Team {
         this.stadium = stadium;
         this.coach = coach;
     }
+
+    public Team(Long id, String name, String country, String city, String stadium, String coach) {
+        this.id = id;
+        this.name = name;
+        this.country = country;
+        this.city = city;
+        this.stadium = stadium;
+        this.coach = coach;
+    }
+
+
 
     public Long getId() {
         return id;
